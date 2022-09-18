@@ -1,1 +1,10 @@
-<h1 class="text-3xl font-bold underline">Hello world!</h1>
+<main class="flex h-screen" [ngClass]="{ dark: isDrakTheme }">
+  <app-recent-chat
+    (onToggleTheme)="toggleTheme()"
+    class="w-80 bg-stone-50 text-slate-700 py-4"
+  ></app-recent-chat>
+  <app-active-chat
+    class="flex-auto relative bg-gradient-to-tr from-[#FFEFBA] to-[#FFFFFF]"
+  ></app-active-chat>
+  <app-chat-info class="w-72 bg-stone-50 text-slate-700 py-4"></app-chat-info>
+</main>

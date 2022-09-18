@@ -1,0 +1,38 @@
+<div class="flex justify-between items-center mb-4 mx-4 h-10">
+  <h1 class="font-lato text-2xl font-semibold">
+    Messages
+    <span class="text-lg text-blue-600"
+      >48 <span class="text-base">New</span></span
+    >
+  </h1>
+  <fa-icon
+    *ngIf="!displaySearchBar"
+    class="cursor-pointer"
+    (click)="onToggleSearchBar()"
+    [icon]="faSearch"
+  ></fa-icon>
+</div>
+<div class="mx-4"><hr /></div>
+<div
+  class="bg-white p-3 rounded-2xl my-4 flex gap-1 mx-4"
+  *ngIf="displaySearchBar"
+>
+  <input
+    type="text"
+    placeholder="search"
+    class="outline-none bg-transparent w-full"
+  />
+  <fa-icon
+    class="cursor-pointer"
+    (click)="onToggleSearchBar()"
+    [icon]="faSearch"
+  ></fa-icon>
+</div>
+<div>
+  <p class="uppercase text-sm mt-8 mx-4">recent Messages</p>
+  <app-chat-item></app-chat-item>
+  <app-chat-item></app-chat-item>
+  <app-chat-item></app-chat-item>
+  <app-chat-item></app-chat-item>
+  <app-chat-item></app-chat-item>
+</div>
